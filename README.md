@@ -1,7 +1,10 @@
 # How to use
 ## Create the Hosting Plan
 ```PowerShell
-New-AzResourceGroupDeployment -ResourceGroupName 1-aec81472-playground-sandbox -TemplateFile hostingplan.bicep -hostingPlanName testHostingPlan
+New-AzResourceGroupDeployment `
+-ResourceGroupName 1-aec81472-playground-sandbox `
+-TemplateFile hostingplan.bicep `
+-hostingPlanName testHostingPlan
 
 
 DeploymentName          : hostingplan
@@ -24,7 +27,12 @@ DeploymentDebugLogLevel :
 
 ## Create the WebApp
 ```PowerShell
- New-AzResourceGroupDeployment -ResourceGroupName 1-aec81472-playground-sandbox -TemplateFile main.bicep -hostingPlanName testHostingPlan -project datawv -env test
+New-AzResourceGroupDeployment `
+ -ResourceGroupName 1-aec81472-playground-sandbox `
+ -TemplateFile main.bicep `
+ -hostingPlanName testHostingPlan `
+ -project datawv `
+ -env test
 
 
 DeploymentName          : main
