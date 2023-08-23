@@ -1,6 +1,6 @@
 # Structure
 
-This repo come with 2 branch
+This repo comes with 2 branches
 
 | Branch   |      Notes      |
 |----------|:-------------|
