@@ -41,8 +41,7 @@ $sqlDB = Get-AzSqlDatabase `
 
 Write-Output "DB name: $($sqlDB.DatabaseName)"
 Write-Output "Current DB status: $($sqlDB.Status), edition: $($sqlDB.Edition), tier: $($sqlDB.CurrentServiceObjectiveName), DTU: $($sqlDB.Capacity)"
- 
-# if ($sqlDB.Edition -eq $scaleEdition -And $sqlDB.CurrentServiceObjectiveName -eq $scaleTier)
+
 if ($sqlDB.Capacity -eq $newDTU)
 {
     Write-Output "Already Database Server $($ServerName)\$($DatabaseName) is in required DTU : $($newDTU)"
